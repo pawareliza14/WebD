@@ -1,0 +1,108 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e9ecef;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Added padding for small screens */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Responsive width */
+    max-width: 450px; /* Limit maximum width */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007bff; /* Brand color */
+}
+
+#level-info, #score-info, #timer {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#sentence {
+    font-size: 22px;
+    margin: 20px 0;
+    font-weight: 300; /* Lighter weight for readability */
+    min-height: 50px; /* Ensure consistent height */
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    resize: none; /* Disable resizing */
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    background: #f8f9fa; /* Light background for results */
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff; /* Accent color for left border */
+}
+
+/* Highlight styles */
+.correct {
+    color: green; /* Color for correctly typed characters */
+    font-weight: bold; /* Optional: make correct characters bold */
+}
+
+.incorrect {
+    color: red; /* Color for incorrectly typed characters */
+    font-weight: bold; /* Optional: make incorrect characters bold */
+}
+
+/* Reset button styles */
+#reset {
+    margin-top: 15px;
+    background-color: #dc3545; /* Bootstrap danger color */
+}
+
+#reset:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
