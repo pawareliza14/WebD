@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game with Levels</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file -->
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Level Game</h1>
-        <div id="level-info">Level: 1</div>
-        <div id="score-info">Score: 0</div>
-        <div id="timer">Time: 30</div>
-        <div id="sentence">Your sentence here</div>
-        <textarea id="user-input" placeholder="Type here..."></textarea>
-        <button id="submit">Submit</button>
-        <button id="reset" style="display: none;">Restart Game</button>
-        <div id="result"></div>
+        <h1>Typing Game</h1>
+        <div id="difficulty-selection"></div>
+        <button id="start-game" style="display:none;">Start Game</button>
+        
+        <div id="game" style="display:none;">
+            <div id="level-info"></div>
+            <div id="score-info"></div>
+            <div id="timer"></div>
+            
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            
+            <div id="sentence"></div>
+            <textarea id="user-input" rows="4" placeholder="Start typing..."></textarea>
+            <button id="submit">Submit</button>
+            <div id="result"></div>
+            <button id="reset">Reset</button>
+            <button id="change-level" style="display:none;">Change Level</button>
+        </div>
     </div>
 
-    <script src="game.js"></script> <!-- External JavaScript file -->
+    <script src="game.js"></script>
 </body>
 </html>
